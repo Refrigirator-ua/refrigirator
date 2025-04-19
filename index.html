@@ -88,6 +88,56 @@
     <textarea name="message" rows="4" placeholder="Що потрібно перевезти?" required></textarea>
     <button class="btn" type="submit">Відправити заявку</button>
   </form>
+document.getElementById("callbackForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+
+    var text = "Новое сообщение от пользователя:\n\n";
+    text += "Имя: " + name + "\n";
+    text += "Email: " + email + "\n";
+    text += "Сообщение: " + message;
+
+    var token = '8124147565:AAGzEktfVLUTzkqLPd1Wg5Z4mm4iGxup-AY';
+    var chatId = '6551648585';
+
+    var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            if (data.ok) {
+                alert('Сообщение отправлено!');
+            } else {
+                alert('Ошибка при отправке сообщения.');
+            }
+        });
+});
+
+document.getElementById("callbackRequestForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    var phone = document.getElementById("phone").value;
+    var text = "Запрос на обратный звонок:\n\n";
+    text += "Телефон: " + phone;
+
+    var token = '8124147565:AAGzEktfVLUTzkqLPd1Wg5Z4mm4iGxup-AY';
+    var chatId = '6551648585';
+
+    var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            if (data.ok) {
+                alert('Запрос отправлен!');
+            } else {
+                alert('Ошибка при отправке запроса.');
+            }
+        });
+});
   <h3>Наш маршрут</h3>
   <iframe src="https://www.google.com/maps/d/embed?mid=1Q8kZl8MuKM9dW2UwB9gHwJhxxZ8yQZA&hl=uk"></iframe>
 </div>
