@@ -1,124 +1,65 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Рефрижераторні перевезення до 5 тонн — Одеса</title>
-  <meta name="description" content="Рефрижераторні перевезення до 5 тонн по Одесі та Україні. Доставка фрукти, овочі, м'яса, молочних продуктів, медикаментів та іншого з дотриманням температурного режиму.">
-  <meta name="keywords" content="рефрижераторні перевезення, Одеса, доставка з температурним режимом, логістика, вантажоперевезення, холодна доставка">
-  <meta name="author" content="РефТранс">
-  <link rel="icon" href="https://refrigirator-etlj10ri2-refrigirator-uas-projects.vercel.app/favicon.ico" type="image/x-icon">
-  <style>
-    body { font-family: Arial, sans-serif; background-color: #f8f9fa; margin: 0; color: #333; }
-    header { background-color: #0069d9; color: white; padding: 20px; text-align: center; }
-    nav { background-color: #e9ecef; padding: 10px; text-align: center; overflow-x: auto; white-space: nowrap; }
-    nav a { display: inline-block; margin: 0 15px; color: #0069d9; text-decoration: none; font-weight: bold; }
-    .hero { padding: 40px 20px; text-align: center; background: url('refrigerator-truck.jpg') no-repeat center/cover; color: white; }
-    .hero h1, .hero p { color: #007bff; }
-    .hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
-    .section { padding: 40px 20px; max-width: 900px; margin: auto; background-color: white; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    .call-button { position: fixed; bottom: 20px; right: 20px; background-color: #28a745; color: white; padding: 15px 20px; font-size: 16px; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 1000; }
-    footer { background-color: #343a40; color: white; text-align: center; padding: 20px; }
-    .btn { background-color: #28a745; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; border: none; cursor: pointer; }
-    form input, form textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; }
-    iframe { width: 100%; height: 300px; border: none; border-radius: 8px; margin-top: 20px; }
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 1.5rem; }
-      .btn { width: 100%; font-size: 1.1rem; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Рефрижераторні перевезення до 5 тонн по Україні. Оперативно, надійно, з дотриманням температурного режиму.">
+    <title>Рефрижераторні перевезення</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <h1>Рефрижераторні перевезення</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#services">Що ми пропонуємо</a></li>
+                <li><a href="#about">Про компанію</a></li>
+                <li><a href="#contacts">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<header>
-  <h1>Рефрижераторні перевезення до 5 тонн</h1>
-  <h1>Одеса та область — оперативно, надійно та з дотриманням температурного режиму</h1>
-</header>
+    <section id="hero">
+        <h2>Перевезення до 5 тонн по Україні з дотриманням температурного режиму</h2>
+        <p>Оперативно та надійно — з нами ваш вантаж у безпеці.</p>
+        <a href="#services" class="button">Замовити перевезення</a>
+    </section>
 
-<nav>
-  <a href="#services">Послуги</a>
-  <a href="#about">Про нас</a>
-  <a href="#problems">Проблеми</a>
-  <a href="#advantages">Переваги</a>
-  <a href="#team">Команда</a>
-  <a href="#contact">Контакти</a>
-</nav>
+    <section id="services">
+        <h2>Що ми пропонуємо</h2>
+        <p>Інтеграція ланок логістичної цепочки для збереження якості швидкопсувного вантажу, зокрема молочних продуктів, заморожених товарів, фруктів, овочів, м’яса та ліків.</p>
+    </section>
 
-<div class="hero">
-  <h1>Перевозимо вантажі по Одеському регіону та всій Україні</h1>
-  <p>М'ясо, молочна продукція,фрукти, овочи, медикаменти, заморозка</p>
-</div>
+    <section id="about">
+        <h2>Про компанію</h2>
+        <p>Наша місія: якість, кількість, час, місце та витрати. Ми працюємо для вас, щоб максимально задовольнити ваші потреби.</p>
+    </section>
 
-<a class="call-button" href="tel:+380504953093">📞 Подзвонити</a>
+    <section id="contacts">
+        <h2>Контакти</h2>
+        <p>Телефон: +380632009054</p>
+        <p>Email: refrigiratorua@gmail.com</p>
+        
+        <form id="callbackForm">
+            <input type="text" id="name" placeholder="Ваше ім'я" required>
+            <input type="email" id="email" placeholder="Ваш email" required>
+            <textarea id="message" placeholder="Ваше повідомлення" required></textarea>
+            <button type="submit">Відправити</button>
+        </form>
 
-<div class="section" id="map">
-  <h2>Наша локація в Чорноморську</h2>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.2063030914434!2d30.6507489!3d46.3016471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63141cf98ecff%3A0x3080bb49556a90f4!2z0KfQtdGA0LrQstCw0YDQvtCy0YHQutCw0Y8g0KHQutGA0LXRgdC60LjQuSDQstGD0LvQuNC60Lg!5e0!3m2!1suk!2sua!4v1713467890000" width="100%" height="300" style="border:0; border-radius:8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
+        <form id="callbackRequestForm">
+            <input type="tel" id="phone" placeholder="Ваш телефон" required>
+            <button type="submit">Запросити зворотній дзвінок</button>
+        </form>
+    </section>
 
-<script>
-  // Простий ефект появи секцій при скролі
-  const sections = document.querySelectorAll('.section');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.1 });
+    <footer>
+        <p>&copy; 2025 Рефрижераторні перевезення. Всі права захищені.</p>
+    </footer>
 
-  sections.forEach(section => {
-    section.style.opacity = 0;
-    section.style.transform = 'translateY(40px)';
-    section.style.transition = 'all 0.6s ease-out';
-    observer.observe(section);
-  });
-</script>
+    <script src="script.js"></script>
+</body>
+</html>
 
-<script>
-  // Відправка заявки у Telegram
-  const telegramToken = '8124147565:AAGzEktfVLUTzkqLPd1Wg5Z4mm4iGxup-AY';
-  const telegramChatId = '6551648585';
-
-  const form = document.querySelector('form');
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const name = form.name.value;
-      const phone = form.phone.value;
-      const email = form.email.value;
-      const message = form.message.value;
-
-      const text = `📦 Нова заявка з сайту:
-👤 Ім’я: ${name}
-📞 Телефон: ${phone}
-✉️ Email: ${email}
-📝 Повідомлення: ${message}`;
-
-      fetch(`https://api.telegram.org/bot${telegramToken}/sendMessage`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ chat_id: telegramChatId, text: text })
-      })
-      .then(res => {
-        if (res.ok) {
-          alert('Дякуємо! Заявку відправлено в Telegram.');
-          form.reset();
-          const confirmMessage = document.createElement('div');
-          confirmMessage.textContent = '✅ Заявку успішно надіслано! Очікуйте дзвінка.';
-          confirmMessage.style.marginTop = '15px';
-          confirmMessage.style.color = '#28a745';
-          confirmMessage.style.fontWeight = 'bold';
-confirmMessage.style.opacity = '0';
-confirmMessage.style.transition = 'opacity 0.5s ease';
-setTimeout(() => confirmMessage.style.opacity = '1', 100);
-          form.appendChild(confirmMessage);
-          setTimeout(() => confirmMessage.remove(), 5000);
-        } else {
-          alert('Помилка відправки. Спробуйте ще раз.');
-        }
-      });
-    });
-  }
-</script>
