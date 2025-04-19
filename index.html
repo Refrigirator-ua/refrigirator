@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Рефрижераторні перевезення до 5 тонн — Одеса</title>
   <style>
     body { font-family: Arial, sans-serif; background-color: #f8f9fa; margin: 0; color: #333; }
@@ -18,6 +17,7 @@
     .btn { background-color: #28a745; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; border: none; cursor: pointer; }
     form input, form textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; }
     iframe { width: 100%; height: 300px; border: none; border-radius: 8px; margin-top: 20px; }
+    #form-status { margin-top: 10px; font-weight: bold; }
   </style>
 </head>
 <body>
@@ -37,6 +37,7 @@
   <h1>Перевозимо вантажі по Одеському регіону та всій Україні</h1>
   <p>М'ясо, молочна продукція, медикаменти, заморозка</p>
 </div>
+
 <div class="section" id="services">
   <h2>Наші послуги</h2>
   <ul>
@@ -46,6 +47,7 @@
     <li>Гнучка система оплати та договори</li>
   </ul>
 </div>
+
 <div class="section" id="problems">
   <h2>Проблеми, які ми вирішуємо</h2>
   <ul>
@@ -56,6 +58,7 @@
     <li>Проблеми з доступністю водіїв через мобілізацію</li>
   </ul>
 </div>
+
 <div class="section" id="advantages">
   <h2>Наші переваги</h2>
   <ul>
@@ -66,83 +69,84 @@
     <li>Профільна освіта в логістиці та транспорті</li>
   </ul>
 </div>
+
 <div class="section" id="team">
   <h2>Наша команда</h2>
   <p><strong>Андрій Тегляєв</strong> — Фах Комерційна експлуатація морського транспорту, Підготовка офіцерів логістики, 30+ років водійського стажу.</p>
   <p><strong>Олена Тегляєва</strong> — Бухгалтерський облік, контроль та аналіз господарської діяльності.</p>
 </div>
+
 <div class="section" id="about">
   <h2>Візія та місія</h2>
   <p>Не існує неважливих клієнтів — є завдання, які повинні вирішувати професіонали. Наша мета — якісно, вчасно та ефективно доставити ваш вантаж.</p>
 </div>
+
 <div class="section" id="contact">
   <h2>Зв'язатися з нами</h2>
   <p>Телефон: +380632009054</p>
-  <p>Email: refrigiratorua@gmail.com</p> 
-  <form action="https://formsubmit.co/refrigiratorua@gmail.com" method="POST">
-    <input type="hidden" name="_autoresponse" value="Дякуємо за звернення! Ми зв'яжемося з вами найближчим часом.">
-    <input type="hidden" name="_next" value="https://yourdomain.com/dyakuyemo.html">
+  <p>Email: refrigiratorua@gmail.com</p>
+
+  <form id="telegramForm">
     <input type="text" name="name" placeholder="Ваше ім'я" required>
     <input type="tel" name="phone" placeholder="Телефон" required>
     <input type="email" name="email" placeholder="Email">
     <textarea name="message" rows="4" placeholder="Що потрібно перевезти?" required></textarea>
     <button class="btn" type="submit">Відправити заявку</button>
   </form>
-document.getElementById("callbackForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+  <div id="form-status"></div>
 
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var message = document.getElementById("message").value;
+  <h3>Зв'язатися через Telegram</h3>
+  <a href="https://t.me/RefrigiratorUA_Bot" class="btn" target="_blank">Написати в Telegram</a>
 
-    var text = "Новое сообщение от пользователя:\n\n";
-    text += "Имя: " + name + "\n";
-    text += "Email: " + email + "\n";
-    text += "Сообщение: " + message;
-
-    var token = '8124147565:AAGzEktfVLUTzkqLPd1Wg5Z4mm4iGxup-AY';
-    var chatId = '6551648585';
-
-    var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`;
-
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            if (data.ok) {
-                alert('Сообщение отправлено!');
-            } else {
-                alert('Ошибка при отправке сообщения.');
-            }
-        });
-});
-
-document.getElementById("callbackRequestForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    var phone = document.getElementById("phone").value;
-    var text = "Запрос на обратный звонок:\n\n";
-    text += "Телефон: " + phone;
-
-    var token = '8124147565:AAGzEktfVLUTzkqLPd1Wg5Z4mm4iGxup-AY';
-    var chatId = '6551648585';
-
-    var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`;
-
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            if (data.ok) {
-                alert('Запрос отправлен!');
-            } else {
-                alert('Ошибка при отправке запроса.');
-            }
-        });
-});
   <h3>Наш маршрут</h3>
   <iframe src="https://www.google.com/maps/d/embed?mid=1Q8kZl8MuKM9dW2UwB9gHwJhxxZ8yQZA&hl=uk"></iframe>
 </div>
+
 <footer>
   <p>&copy; 2025 РефТранс. Всі права захищені.</p>
 </footer>
+
+<script>
+  const form = document.getElementById('telegramForm');
+  const statusDiv = document.getElementById('form-status');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const name = form.name.value;
+    const phone = form.phone.value;
+    const email = form.email.value;
+    const message = form.message.value;
+
+    const text = `
+🚚 Нова заявка:
+👤 Ім'я: ${name}
+📞 Телефон: ${phone}
+📧 Email: ${email}
+📦 Повідомлення: ${message}
+    `;
+
+    const chat_id = '6551648585';
+    const token = '8124147565:AAGzEktfVLUTzkqLPd1Wg5Z4mm4iGxup-AY';
+    const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: chat_id, text: text })
+      });
+
+      if (response.ok) {
+        statusDiv.innerHTML = '<p style="color:green;">Повідомлення надіслано в Telegram!</p>';
+        form.reset();
+      } else {
+        statusDiv.innerHTML = '<p style="color:red;">Помилка при надсиланні. Спробуйте ще раз.</p>';
+      }
+    } catch (error) {
+      statusDiv.innerHTML = '<p style="color:red;">Помилка з’єднання. Спробуйте пізніше.</p>';
+    }
+  });
+</script>
 </body>
 </html>
